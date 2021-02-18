@@ -39,8 +39,7 @@ class HiHttp {
     var response, result;
     var header = getHeaderParams();
 
-    response =
-        await Dio().get(uri.toString(), options: Options(headers: header));
+    response = await Dio().get(uri.toString(), options: Options(headers: header));
     result = response.data;
     Utf8Decoder utf8decoder = Utf8Decoder(); // FIX  中文乱码
 

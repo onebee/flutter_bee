@@ -21,7 +21,7 @@ class _RecommendPageState extends BaseState<RecommendPage>{
 
 
   int pageIndex = 1;
-  List<ChaptersBaseModel> goodsModels;
+  List<ChaptersBaseModel> chapters ;
   bool _loading = true;
   ScrollController _scrollController = ScrollController();
 
@@ -41,10 +41,9 @@ class _RecommendPageState extends BaseState<RecommendPage>{
       onRefresh: (){
 
       },
-       child: MediaQuery.removePadding(
-           removeTop: true,
-           context: context,
-           child: Text("dasfdas")
+       child: Container(
+
+           child: Text(chapters.length>0 ? chapters[3].name : "loading",style: TextStyle(fontSize: 25,color: Colors.black),)
      ),
    ));
   }
@@ -58,18 +57,14 @@ class _RecommendPageState extends BaseState<RecommendPage>{
     HiDao.getInstance().chapters(this, (ChaptersMode mode){
       setState(() {
         _loading = false;
+        List<ChaptersBaseModel> data = mode.data;
+        chapters= data;
 
-        var data = mode.data;
-        var errorCode = mode.errorCode;
-        var errorMsg = mode.errorMsg;
-
-        print('${data} + ${errorMsg} + $errorCode');
       });
 
     },(HiError error) {
       setState(() {
         _loading = false;
-
         print('${error.message}');
       });
     });

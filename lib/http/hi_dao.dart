@@ -38,6 +38,7 @@ class HiDao {
     } catch (e) {
       if (state != null && state.isDispose) return;
       error(e.message);
+
       print('hi-dao:${e.toString()}');
     }
   }
