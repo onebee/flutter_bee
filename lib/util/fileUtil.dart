@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:pathprovider/path_provider.dart';
+import 'package:path_provider/path_provider.dart';
 import 'timeUtil.dart';
 
 class LogsStorage {

@@ -10,11 +10,11 @@ part 'chapters_model.g.dart';
 
 @JsonSerializable()
 class ChaptersMode {
-  String errorCode;
+  int errorCode;
   String errorMsg;
   List<ChaptersBaseModel> data;
 
-  ChaptersMode(this.errorCode, this.errorMsg, this.data);
+  ChaptersMode(this.errorCode, this.errorMsg,this.data);
 
   factory ChaptersMode.fromJson(Map<String, dynamic> json) => _$ChaptersModeFromJson(json);
   Map<String, dynamic> toJson() => _$ChaptersModeToJson(this);

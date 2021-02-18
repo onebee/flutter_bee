@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bee/http/hi_dao.dart';
 import 'package:flutter_bee/http/hi_error.dart';
+import 'package:flutter_bee/model/chapter_base_mode.dart';
 import 'package:flutter_bee/model/chapters_model.dart';
 import 'package:flutter_bee/model/common_model.dart';
 import 'package:flutter_bee/page/base_page.dart';
