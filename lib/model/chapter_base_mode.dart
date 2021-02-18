@@ -5,7 +5,7 @@ import 'package:json_annotation/json_annotation.dart';
  */
 part 'chapter_base_mode.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class ChaptersBaseModel {
   List<dynamic> children;
   int courseId;
