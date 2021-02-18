@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bee/page/demo_page.dart';
 import 'package:flutter_bee/page/home_page.dart';
+import 'package:flutter_bee/page/recommend_page.dart';
 
 /// @author  diaokaibin@gmail.com on 2/18/21.
 class HomeNavigator extends StatefulWidget {
@@ -42,8 +43,7 @@ class _HomeNavigatorState extends State<HomeNavigator> {
           DemoPage(
             title: "分类",
           ),
-          DemoPage(
-            title: "推荐",
+          RecommendPage(
           ),
           DemoPage(
             title: "我的",

@@ -25,6 +25,11 @@ class HiHttp {
     } else {}
   }
 
+  getHeaderParams() {
+    return {"auth-token": "MTU5Mjg1MDg3NDcwNw=="};
+  }
+
+
   Future _doGet(BaseRequest request) async {
     var uri;
     if (request.params.length != 0) {
@@ -38,17 +43,14 @@ class HiHttp {
     response = await Dio().get(uri.toString(), options: Options(headers: header));
     result = response.data;
     Utf8Decoder utf8decoder = Utf8Decoder(); // FIX  中文乱码
-    if (response.headers["content-type"].contains("/json")) {
-      result = json.decode(utf8decoder.convert(response.bodyBytes));
-    } else {
-      result = utf8.decode(response.bodyBytes);
-    }
+
+    // result = json.decode(utf8decoder.convert(response.bodyBytes));
     if (response.statusCode == 200) {
       if (result["code"] == 0) {
-        return result["data"];
-      } else {
-        throw Exception(result["msg"]);
-      }
+        return result;
+      // } else {
+      //   throw Exception(result["msg"]);
+      // }
     } else if (response.statusCode == 401) {
       throw Exception(NeedLogin());
     } else if (response.statusCode == 403) {
@@ -60,7 +62,5 @@ class HiHttp {
 
   }
 
-  getHeaderParams() {
-    return {"auth-token": "MTU5Mjg1MDg3NDcwNw=="};
-  }
+
 }

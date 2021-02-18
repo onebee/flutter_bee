@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bee/model/CommonModel.dart';
+import 'package:flutter_bee/model/common_model.dart';
 
 /// @author  diaokaibin@gmail.com on 2/17/21.
 

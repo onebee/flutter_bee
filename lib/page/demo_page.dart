@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-/**
- * @author  diaokaibin@gmail.com on 2/18/21.
- */
+/// @author  diaokaibin@gmail.com on 2/18/21.
 
 class DemoPage extends StatefulWidget {
   final String title;

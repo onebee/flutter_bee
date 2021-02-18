@@ -3,7 +3,7 @@ enum HttpMethod { GET, POST }
 
 abstract class BaseRequest {
   String url() {
-    return "https://www.wanandroid.com";
+    return "wanandroid.com";
   }
 
   HttpMethod httpMethod();
