@@ -8,7 +8,7 @@ import 'chapter_base_mode.dart';
 
 part 'chapters_model.g.dart';
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class ChaptersMode {
   int errorCode;
   String errorMsg;
