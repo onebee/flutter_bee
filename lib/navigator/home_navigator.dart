@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bee/page/demo_page.dart';
+import 'package:flutter_bee/page/home_page.dart';
 
 /// @author  diaokaibin@gmail.com on 2/18/21.
 class HomeNavigator extends StatefulWidget {
@@ -32,8 +33,8 @@ class _HomeNavigatorState extends State<HomeNavigator> {
         controller: _pageController,
         children: [
 
-          DemoPage(
-            title: "首页",
+          HomePage(
+
           ),
           DemoPage(
             title: "收藏",
@@ -48,6 +49,7 @@ class _HomeNavigatorState extends State<HomeNavigator> {
             title: "我的",
           ),
         ],
+        physics: NeverScrollableScrollPhysics(),
 
       ),
 
