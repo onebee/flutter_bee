@@ -42,12 +42,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             padding: EdgeInsets.only(top: 30),
             child: TabBar(
               controller: _tabController,
-              labelColor: Colors.deepPurple,
+              labelColor: Colors.black,
               isScrollable: true,
               indicator: UnderlineIndicator(
 
-                strokeCap: StrokeCap.square,
-                borderSide: BorderSide(color: Colors.blue),
+                strokeCap: StrokeCap.round,
+                borderSide: BorderSide(color: Colors.red),
                 insets: EdgeInsets.only(bottom: 5)
 
               ),

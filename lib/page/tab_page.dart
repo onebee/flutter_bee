@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-/**
- * @author  diaokaibin@gmail.com on 2/18/21.
- */
+/// @author  diaokaibin@gmail.com on 2/18/21.
 
 class TabPage extends StatefulWidget {
   final String category;
@@ -23,7 +21,7 @@ class _TabPageState extends State<TabPage> {
         child: Center(
           child: Text(
             widget.category,
-            style: TextStyle(color: Colors.white, fontSize: 20),
+            style: TextStyle(color: Colors.white, fontSize: 55),
           ),
         ),
 
