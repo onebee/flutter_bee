@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_bee/http/hi_dao.dart';
 import 'package:flutter_bee/http/hi_error.dart';
 import 'package:flutter_bee/model/chapter_base_mode.dart';
@@ -17,11 +18,11 @@ class RecommendPage extends StatefulWidget{
 
 }
 
-class _RecommendPageState extends BaseState<RecommendPage>{
+class _RecommendPageState extends BaseState<RecommendPage> with AutomaticKeepAliveClientMixin{
 
 
   int pageIndex = 1;
-  List<ChaptersBaseModel> chapters ;
+  List<ChaptersBaseModel> chapters = [] ;
   bool _loading = true;
   ScrollController _scrollController = ScrollController();
 
@@ -69,5 +70,9 @@ class _RecommendPageState extends BaseState<RecommendPage>{
       });
     });
   }
+
+  @override
+  // TODO: implement wantKeepAlive
+  bool get wantKeepAlive => true;
 
 }
